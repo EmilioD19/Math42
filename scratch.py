@@ -1,13 +1,15 @@
 import numpy as np
 
 # Define the matrix A
-A = np.array([[0, 0.8, 3.5],
-              [0.8, 0, 0],
-              [0, 0.9, 0]])
+A = np.array([[1,1,0], 
+              [0,1,2],
+              [0,0,3]])
 
 # Step 1: Compute eigenvalues and eigenvectors
-eigenvalues, eigenvectors = np.linalg.eig(A)
+print(np.linalg.eig(A))
 
+
+'''
 # Step 2: Identify the dominant eigenvalue and its corresponding eigenvector
 dominant_index = np.argmax(np.abs(eigenvalues))  # Index of the dominant eigenvalue
 dominant_eigenvalue = eigenvalues[dominant_index]
@@ -28,3 +30,4 @@ print("Population Distribution After 10 Years:", x_10)
 
 # Optionally compare the distributions
 print("Normalized Population Distribution After 10 Years:", x_10 / np.linalg.norm(x_10))
+'''
